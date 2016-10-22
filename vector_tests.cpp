@@ -147,6 +147,11 @@ TEST(Vector3d, CrossProduct)
 }
 
 // Перегрузка оператора << для вывода
+// оператор вывода в поток для vector3d
+std::ostream &operator<<(std::ostream &stream, const vector3d &a) {
+            return stream << "{" <<a.x << ", " << a.y << ", " << a.z << "}";
+}
+
 // Вектор должен выводиться в виде {X, Y, Z}
 TEST(Vector3d, Output)
 {
